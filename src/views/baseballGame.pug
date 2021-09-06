@@ -1,3 +1,16 @@
-extends base 
+extends layouts/base 
 
 block content
+    div(id="app")
+        h1 BaseBallGame⚾
+        p 
+            strong 1~9까지의 수를 중복없이 3개를 작성해주세요.
+            br 
+            p 올바른 예) 139
+            p 틀린 예) 122
+        form(method="POST")
+            input(name="number", type="text", id="user-input")
+            button(type="submit" id="submit") 확인
+        h3 📄 결과
+        div(id="result")
+    

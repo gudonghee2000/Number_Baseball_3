@@ -1,8 +1,8 @@
 import express from "express";
-import { baseballGame } from "../controllers/gameController";
+import { getBaseballGame, postBaseballGame } from "../controllers/gameController";
 
 const baseballGameRouter = express.Router();
 
-baseballGameRouter.get("/", baseballGame);
+baseballGameRouter.route("/").get(getBaseballGame).post(postBaseballGame);
 
 export default baseballGameRouter;
