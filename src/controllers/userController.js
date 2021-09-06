@@ -1,4 +1,8 @@
-export const home = (req, res) => {
-    res.render("home", {pageTitle: "BaseballGame⚾"});
+export const getHome = (req, res) => {
+    res.render("home", { pageTitle: "Home" });
+}
+
+export const postHome = (req, res) => {
+    res.redirect("/game");
 }
 

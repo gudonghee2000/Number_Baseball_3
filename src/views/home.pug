@@ -1,4 +1,7 @@
 extends base
 
-block content 
-    
+block content
+    if(errorMessage)
+        li=errorMessage
+    form(method="POST")
+        button(type="submit") 게임 플레이
