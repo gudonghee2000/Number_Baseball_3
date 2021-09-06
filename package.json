@@ -1,0 +1,25 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gudonghee2000/Number_Baseball_3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gudonghee2000/Number_Baseball_3/issues"
+  },
+  "homepage": "https://github.com/gudonghee2000/Number_Baseball_3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.4"
+  }
+}
