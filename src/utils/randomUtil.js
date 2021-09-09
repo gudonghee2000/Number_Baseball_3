@@ -1,5 +1,4 @@
 export class randomUtil {
-
     static createNumbers = () => {
         var numbers = new Set();
         while (numbers.size < 3) {
