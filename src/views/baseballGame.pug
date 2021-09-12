@@ -13,4 +13,19 @@ block content
             button(type="submit" id="submit") 확인
         h3 📄 결과
         div(id="result")
+            if (!strikeCount && !ballCount)
+                span
+            else if (strikeCount == 3 && ballCount == 0) 
+                span 🎺 정답을 맞추셨습니다!! 🎺
+                br
+                span 게임을 새로 시작하시겠습니까? 
+                button(type="submit" id="new_game") 게임 재시작
+            else if (strikeCount != 0 && ballCount != 0)
+                span #{strikeCount}스트라이크 #{ballCount}볼
+            else if (strikeCount == 0 && ballCount != 0)
+                span #{ballCount}볼
+            else if (strikeCount != 0 && ballCount == 0)
+                span #{strikeCount}스트라이크
+            else
+                span 낫싱
     

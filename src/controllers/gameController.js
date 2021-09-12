@@ -21,6 +21,12 @@ export const postBaseballGame = async (req, res) => {
     await UserNumbers.create({
         numbers: UserNumbers.inputNumbers(inputNumbers.split("")),
     });
-    res.render("baseballGame", { pageTitle: "BaseBallGame⚾" });    
+    const userNumbers = await UserNumbers.findOne();
+    const systemNumbers = await SystemNumbers.findOne();
+    const strikeCount = SystemNumbers.getStrikeCount(systemNumbers.numbers, userNumbers.numbers);
+    const ballCount = SystemNumbers.getBallCount(systemNumbers.numbers, userNumbers.numbers);
+    console.log(strikeCount);
+    console.log(ballCount);
+    res.render("baseballGame", { pageTitle: "BaseBallGame⚾", strikeCount:strikeCount, ballCount:ballCount });
 }
 
